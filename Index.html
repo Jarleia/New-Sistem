@@ -76,43 +76,6 @@
 
   <input type="file" id="inputImagem" accept="image/*">
 
-  
-
-  <!-- Container para exibir a imagem -->
-
-  <div id="containerImagem">
-
-    <img id="imagemSelecionada" src="#" alt="Imagem Selecionada" style="display:none;">
-
-  </div>
-
-  
-
-  <script>
-
-    document.getElementById('inputImagem').addEventListener('change', function(event) {
-
-      var arquivo = event.target.files[0];
-
-      var leitor = new FileReader();
-
-      
-
-      leitor.onload = function(evento) {
-
-        var imagem = document.getElementById('imagemSelecionada');
-
-        imagem.src = evento.target.result;
-
-        imagem.style.display = 'block'; // Exibe a imagem
-
-      };
-
-      leitor.readAsDataURL(arquivo);
-
-    });
-
-  </script>   
 
     <!-- Botão vinculado à outra página -->
 
@@ -171,7 +134,7 @@
   </div>
 
 </form>
-
+<p>Página web</p>
 <br>
 
 <br>
