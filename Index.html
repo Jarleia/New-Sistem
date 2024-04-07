@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gym Sistem</title>
+
+    <link rel="stylesheet" type="text/css" href="paginainfopessoais.css" />
+
+    <!-- Insira o link para o favicon -->
+
+  <link rel="icon" href="gym.png" type="image/png">
+
+  </head>
+
+  <body>
+
+    <header class="header">
+
+      <nav class="nav">
+
+        <a href="#" class="logo nav-link">Sair</a>
+
+        <a href="#" class="logo nav-link">Página do aluno</a>
+
+        <br>
+
+        <button class="nav-toggle" aria-label="Abrir menú">
+
+          <i class="fas fa-bars"></i>
+
+        </button>
+
+        <ul class="nav-menu">
+
+        <br>
+
+          <li class="nav-menu-item">
+
+            <a href="#" class="nav-menu-link nav-link nav-menu-link_active"
+
+              >Usuário</a
+
+            >
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </header>
+
+    <main>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+  <!-- Input de arquivo para selecionar uma imagem -->
+
+  <input type="file" id="inputImagem" accept="image/*">
+
+  
+
+  <!-- Container para exibir a imagem -->
+
+  <div id="containerImagem">
+
+    <img id="imagemSelecionada" src="#" alt="Imagem Selecionada" style="display:none;">
+
+  </div>
+
+  
+
+  <script>
+
+    document.getElementById('inputImagem').addEventListener('change', function(event) {
+
+      var arquivo = event.target.files[0];
+
+      var leitor = new FileReader();
+
+      
+
+      leitor.onload = function(evento) {
+
+        var imagem = document.getElementById('imagemSelecionada');
+
+        imagem.src = evento.target.result;
+
+        imagem.style.display = 'block'; // Exibe a imagem
+
+      };
+
+      leitor.readAsDataURL(arquivo);
+
+    });
+
+  </script>   
+
+    <!-- Botão vinculado à outra página -->
+
+  <div class="container">
+
+  <a href="index02.html" class="botao">Alterar dados</a>
+
+  </div>
+
+    <br>
+
+      <div class="borda"><strong>Detalhes do usuário</strong></div>
+
+    </main>  
+
+    <br>
+
+    <form action="/pagina-processa-dados-do-form" method="post">
+
+  <div>
+
+    <label for="idade">Idade:</label>
+
+    <input type="text" id="idade" />
+
+  </div>
+
+  <br>
+
+  <div>
+
+    <form action="/submit_form" method="post">
+
+    <label for="sexo">Selecione o Sexo:</label>
+
+    <select id="sexo" name="sexo">
+
+      <option value="feminino">Feminino</option>
+
+      <option value="masculino">Masculino</option>
+
+      <option value="outro">Outro</option>
+
+    </select>
+
+    <br><br>
+
+  </div>
+
+  <br>
+
+  <div class="button">
+
+    <button type="submit">Enviar dados</button>
+
+  </div>
+
+</form>
+
+<br>
+
+<br>
+
+  <footer>
+
+    <p>© 2024 Gym Sistem-Léia. Todos os direitos reservados.</p>
+
+</footer>
+
+  </body>
+
+</html>
