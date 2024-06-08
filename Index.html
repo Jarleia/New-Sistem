@@ -13,6 +13,30 @@ rel="stylesheet">
     <!-- Insira o link para o favicon -->
   <link rel="icon" href="gym.png" type="image/png">
   <script src="script.js"></script>
+  <script>
+        // Função que mostra na tela a mensagem "Olá, Mundo!!!"
+        function sayHello() {
+            alert("Olá, Mundo!!!");
+        }
+
+        // Função que converte um valor em reais para dólares
+        function realToDollar(valorEmReais) {
+            const taxaDeCambio = 5; // 1 dólar = 5 reais
+            const valorEmDolares = valorEmReais / taxaDeCambio;
+            return valorEmDolares;
+        }
+
+        // Função para realizar a conversão de real para dólar e mostrar o resultado na tela
+        function converterParaDolar() {
+            const valorEmReais = parseFloat(prompt("Digite o valor em reais:"));
+            if (!isNaN(valorEmReais)) {
+                const valorEmDolares = realToDollar(valorEmReais);
+                alert(`${valorEmReais} reais equivalem a ${valorEmDolares} dólares.`);
+            } else {
+                alert("Valor inválido. Por favor, digite um número válido.");
+            }
+        }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -133,24 +157,10 @@ rel="stylesheet">
 </form>
 
 <p>Página web</p>
-<h1>Olá, Mundo!</h1>
-    <button onclick="sayHello()">Clique aqui para ver a mensagem</button>
-<br>
-// Função que mostra na tela a mensagem "Olá, Mundo!!!"
-function sayHello() {
-    alert("Olá, Mundo!!!");
-}
-// Função que converte um valor em reais para dólares
-function realToDolar(valorEmReais) {
-    const taxaDeCambio = 5; // 1 dólar = 5 reais
-    const valorEmDolares = valorEmReais / taxaDeCambio;
-    return valorEmDolares;
-}
-
-// Exemplo de uso da função
-const valorEmReais = 50;
-const valorEmDolares = realToDolar(valorEmReais);
-console.log(`${valorEmReais} reais equivalem a ${valorEmDolares} dólares.`);
+<h1>Conversor de Moeda</h1>
+    <button onclick="sayHello()">Clique aqui para ver a mensagem 'Olá, Mundo!!!'</button>
+    <br><br>
+    <button onclick="converterParaDolar()">Converter Reais para Dólares</button>
 
 <br>
   <footer>
